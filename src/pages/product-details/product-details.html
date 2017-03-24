@@ -1,0 +1,36 @@
+<!--
+  Generated template for the ProductDetails page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list inset>
+    <ion-item *ngFor="let pref of categoryPrefs" class="no-padding">
+      <ion-label>{{pref.pref_title}}</ion-label>
+      <ion-select [attr.id]="'select_' + pref.pref_title">
+        <ion-option *ngFor="let val of pref.pref_values" >{{val}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item  class="no-padding">
+      <ion-label>Color</ion-label>
+      <ion-select id="select_color">
+        <ion-option *ngFor="let color of product.product_colors" value="{{color}}">{{color}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="no-padding">
+      <ion-label>Quantity</ion-label>
+      <ion-input type="number" text-right id="select_quantity" [(ngModel)]="quantity"></ion-input>
+    </ion-item>
+    <button ion-button block (click)="clickAddToCart()">Add to cart</button>
+  </ion-list>
+</ion-content>

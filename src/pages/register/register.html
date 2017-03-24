@@ -1,0 +1,37 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="vertical-align-content">
+  <ion-card>
+    <ion-list inset>
+      <ion-item>
+        <!--<ion-label>Name</ion-label>-->
+        <ion-input type="text" placeholder="Name" color="inverse" #txtName></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--<ion-label stacked>Email</ion-label>-->
+        <ion-input type="text" placeholder="Email" color="inverse" #txtEmail></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--<ion-label stacked>Password</ion-label>-->
+        <ion-input type="password" placeholder="Password" color="inverse" #txtPassword></ion-input>
+      </ion-item>
+      <button ion-button full (click)="clickRegister(txtName.value, txtEmail.value, txtPassword.value)">Sign Up</button>
+    </ion-list>
+  </ion-card>
+</ion-content>
